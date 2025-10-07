@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["lintfix", "Nuxt", "nuxtjs", "shadcn", "vueuse"],
+  "cSpell.words": [
+    "kiminokoe",
+    "lintfix",
+    "Nuxt",
+    "nuxtjs",
+    "shadcn",
+    "vueuse"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
