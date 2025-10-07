@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["lintfix"],
+  "cSpell.words": ["lintfix", "Nuxt", "nuxtjs", "shadcn", "vueuse"],
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
