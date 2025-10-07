@@ -1,6 +1,6 @@
 <template>
+  <KiNavbar />
   <div class="main">
-    <p>Some default layout content shared across all pages</p>
     <slot />
   </div>
 </template>
@@ -24,8 +24,10 @@ useHead({
 
 <style>
 :root {
-  --kiminokoe-main-color: #000000;
-  --kiminokoe-max-width: 1080px;
+  --ki-main-color: #ffffff;
+  --ki-accent-color: #b92a4f;
+  --ki-base-color: #000000;
+  --ki-max-width: 1080px;
 }
 
 /* Font Family */
@@ -35,12 +37,16 @@ useHead({
   src: url('assets/font/NotoSerifJP-VariableFont_wght.ttf') format('ttf');
 }
 
-.main {
-  max-width: var(--kiminokoe-max-width);
-  margin: auto;
-
+body {
+  background-color: var(--ki-base-color);
+  color: var(--ki-main-color);
   font-family: 'Noto Serif JP', serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.main {
+  max-width: var(--ki-max-width);
+  margin: auto;
 }
 </style>
