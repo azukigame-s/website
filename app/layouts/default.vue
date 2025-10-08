@@ -27,7 +27,7 @@ useHead({
   --ki-main-color: #ffffff;
   --ki-accent-color: #b92a4f;
   --ki-base-color: #000000;
-  --ki-max-width: 1080px;
+  --ki-max-width: 1366px;
 }
 
 /* Font Family */
