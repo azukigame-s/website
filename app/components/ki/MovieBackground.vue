@@ -4,7 +4,11 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="js">
+const { isMuted } = useVideoMute()
+
+///// props
+
 const props = defineProps({
   videoId: {
     type: String,
@@ -16,8 +20,27 @@ const props = defineProps({
   },
 })
 
+///// data
+
 const videoContainer = ref(null)
 let player = null
+
+///// watch
+
+watch(
+  () => isMuted.value,
+  (newValue) => {
+    if (!player) return
+
+    if (newValue) {
+      player.unMute()
+    } else {
+      player.mute()
+    }
+  }
+)
+
+///// mounted
 
 onMounted(() => {
   if (!window.YT) {
@@ -34,7 +57,7 @@ onMounted(() => {
         autoplay: 1,
         mute: 1,
         loop: 1,
-        playlist: props.videoId, // ループに必要
+        playlist: props.videoId,
         controls: 0,
         showinfo: 0,
         modestbranding: 1,
@@ -56,6 +79,8 @@ onMounted(() => {
   }
 })
 
+///// unmounted
+
 onUnmounted(() => {
   if (player && player.destroy) {
     player.destroy()
@@ -65,7 +90,7 @@ onUnmounted(() => {
 
 <style lang="css" scoped>
 .video-container {
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
   min-height: 50vh;
 }
 
