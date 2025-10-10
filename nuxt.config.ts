@@ -6,13 +6,6 @@ export default defineNuxtConfig({
     dirs: ['composables', 'composables/**', 'types', 'types/**'],
   },
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
-  nitro: {
-    prerender: {
-      failOnError: false, // プリレンダリングエラーを無視
-      crawlLinks: true,
-      routes: ['/'], // 最低限トップページだけプリレンダリング
-    },
-  },
   shadcn: {
     /**
      * Prefix for all the imported component
@@ -24,4 +17,5 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui',
   },
+  ssr: false,
 })
