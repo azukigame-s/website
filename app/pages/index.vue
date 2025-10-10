@@ -138,7 +138,7 @@
                 {{ r.summary }}
               </p>
               <NuxtLink
-                :to="`/world/${r.slug}`"
+                :to="`/scrapbook/${r.slug}`"
                 class="mt-3 inline-block text-sm text-white/80 hover:text-white"
                 >読む →</NuxtLink
               >
@@ -217,10 +217,10 @@ const features = [
 ]
 const regions = [
   {
-    name: '旧校舎',
+    name: '地蔵焚',
     summary: '理科準備室の鍵は、まだ戻っていない。',
     image: 'https://picsum.photos/seed/d/800/600',
-    slug: 'old-school',
+    slug: 'jizoudaki',
   },
   {
     name: '堤防',
