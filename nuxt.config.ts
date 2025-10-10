@@ -8,7 +8,9 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
   nitro: {
     prerender: {
-      failOnError: false,
+      failOnError: false, // プリレンダリングエラーを無視
+      crawlLinks: true,
+      routes: ['/'], // 最低限トップページだけプリレンダリング
     },
   },
   shadcn: {
