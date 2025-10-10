@@ -6,6 +6,11 @@ export default defineNuxtConfig({
     dirs: ['composables', 'composables/**', 'types', 'types/**'],
   },
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
+  },
   shadcn: {
     /**
      * Prefix for all the imported component
