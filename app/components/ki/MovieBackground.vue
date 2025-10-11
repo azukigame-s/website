@@ -91,8 +91,9 @@ onUnmounted(() => {
 <style lang="css" scoped>
 .video-container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
+  min-height: 100vh;
 }
 
 .video-container > div {
