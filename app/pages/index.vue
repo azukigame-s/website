@@ -1,15 +1,21 @@
 <template>
   <div>
     <!-- Hero -->
-    <section id="mv" class="relative w-full h-[60vh] md:h-[80vh]">
+    <section id="mv" class="relative w-full" :style="{ height: videoHeight }">
       <ClientOnly>
         <KiMovieBackground video-id="Qrx7Ahl8tnM" />
       </ClientOnly>
 
       <div class="noise absolute inset-0 pointer-events-none"></div>
+    </section>
 
-      <div class="absolute bottom-4 left-0 right-0 flex justify-center">
-        <button @click="scrollTo('hero')" class="text-white/80 text-sm">
+    <!-- Scroll Link -->
+    <section class="py-4 border-t border-base-line bg-black/20">
+      <div class="w-full mx-auto max-w-7xl px-4 flex justify-center">
+        <button
+          @click="scrollTo('hero')"
+          class="text-white/80 text-sm hover:text-white transition"
+        >
           Scroll
         </button>
       </div>
@@ -173,6 +179,17 @@
 
 <script setup lang="ts">
 const { scrollTo } = useScrollSpy()
+
+// 動画の高さを計算（画面高さ - Scrollリンクの高さ）
+const videoHeight = computed(() => {
+  if (process.client) {
+    const windowHeight = window.innerHeight
+    const scrollLinkHeight = 60 // Scrollリンクセクションの推定高さ（py-4 + ボタン）
+    const availableHeight = windowHeight - scrollLinkHeight
+    return `${availableHeight}px`
+  }
+  return '60vh' // SSR時のフォールバック
+})
 
 // モックデータ（差し替え前提）
 const characters = [

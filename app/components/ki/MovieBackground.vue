@@ -90,13 +90,16 @@ onUnmounted(() => {
 
 <style lang="css" scoped>
 .video-container {
-  padding-bottom: 56.25%;
-  min-height: 50vh;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-@media (max-width: 768px) {
-  .video-container {
-    min-height: 50vh;
-  }
+.video-container > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>
