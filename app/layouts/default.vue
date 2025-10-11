@@ -6,8 +6,6 @@
 </template>
 
 <script setup lang="ts">
-const { observeIds } = useScrollSpy()
-
 ///// seo
 
 useSeoMeta({
@@ -21,12 +19,6 @@ useSeoMeta({
 
 useHead({
   title: 'キミノコエ',
-})
-
-///// mounted
-
-onMounted(() => {
-  observeIds(['hero', 'characters', 'system', 'lore', 'cta'])
 })
 </script>
 

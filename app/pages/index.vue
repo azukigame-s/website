@@ -126,10 +126,11 @@
           </p>
         </header>
         <div class="flex gap-4 md:gap-6 overflow-x-auto pb-4 scrollbar-hide">
-          <article
+          <NuxtLink
             v-for="r in regions"
             :key="r.name"
-            class="flex-shrink-0 w-48 md:w-56 border border-base-line rounded-lg overflow-hidden group cursor-pointer"
+            :to="`/scrapbook/${r.slug}`"
+            class="flex-shrink-0 w-48 md:w-56 border border-base-line rounded-lg overflow-hidden group cursor-pointer hover:border-white/80 transition-colors"
           >
             <div class="relative h-[40vh] md:h-[50vh]">
               <img
@@ -148,10 +149,11 @@
                   <p class="text-xs text-white/80 mt-1 line-clamp-2">
                     {{ r.summary }}
                   </p>
+                  <div class="mt-2 text-xs text-white/60">読む →</div>
                 </div>
               </div>
             </div>
-          </article>
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -183,8 +185,6 @@
 </template>
 
 <script setup lang="ts">
-const { scrollTo } = useScrollSpy()
-
 // スムーズスクロール機能
 const smoothScrollTo = (elementId: string) => {
   const element = document.getElementById(elementId)
@@ -240,11 +240,13 @@ const handleWheel = (event: WheelEvent) => {
 // タッチスクロール制御（モバイル対応）
 const handleTouchStart = (event: TouchEvent) => {
   const touch = event.touches[0]
+  if (!touch) return
   const startY = touch.clientY
   let startTime = Date.now()
 
   const handleTouchEnd = (event: TouchEvent) => {
     const touch = event.changedTouches[0]
+    if (!touch) return
     const endY = touch.clientY
     const endTime = Date.now()
     const deltaY = startY - endY
@@ -335,8 +337,8 @@ const features = [
 const regions = [
   {
     name: '地蔵焚',
-    summary: '理科準備室の鍵は、まだ戻っていない。',
-    image: 'https://picsum.photos/seed/d/800/600',
+    summary: '小さな罅が、大きな歪みを隠す村',
+    image: '/images/jizoudaki.jpg',
     slug: 'jizoudaki',
   },
   {
@@ -358,6 +360,7 @@ const regions = [
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
