@@ -335,13 +335,13 @@ const regions = [
   {
     name: '地蔵焚',
     summary: '小さな罅が、大きな歪みを隠す村',
-    image: '/images/jizoudaki.jpg',
+    image: usePublicPath('/images/jizoudaki.jpg'),
     slug: 'jizoudaki',
   },
   {
     name: '童歌',
     summary: '祈りは忘れられ、調べだけが継ぐ',
-    image: '/images/futakojizou.jpg',
+    image: usePublicPath('/images/futakojizou.jpg'),
     slug: 'warabeuta',
   },
   {

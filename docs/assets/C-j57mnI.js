@@ -1,0 +1,1 @@
+import{_ as c,c as o,o as n,x as t}from"#entry";const s={},_={style:{color:"var(--ki-accent-color)"}};function r(e,a){return n(),o("span",_,[t(e.$slots,"default")])}const i=Object.assign(c(s,[["render",r]]),{__name:"KiAccent"});export{i as _};
