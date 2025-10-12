@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   ssr: false,
 
   app: {
-    baseURL: '/kiminokoe/', // 例: '/kiminokoe/'
+    baseURL: '/website/', // 例: '/kiminokoe/'
     buildAssetsDir: 'assets',
   },
 
