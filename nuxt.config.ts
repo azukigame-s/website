@@ -23,5 +23,14 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/website/',
     buildAssetsDir: 'assets',
+    head: {
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/website/favicon.ico',
+        },
+      ],
+    },
   },
 })
