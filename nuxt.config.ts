@@ -17,5 +17,18 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui',
   },
+
   ssr: false,
+
+  app: {
+    baseURL: '/kiminokoe/', // 例: '/kiminokoe/'
+    buildAssetsDir: 'assets',
+  },
+
+  nitro: {
+    output: {
+      dir: 'docs',
+      publicDir: 'docs',
+    },
+  },
 })
