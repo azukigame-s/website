@@ -18,7 +18,7 @@
             <KiAccent>キ</KiAccent>ミノコエ
           </h1>
           <p class="mt-3 text-base text-white/80">
-            声が導く、静かな恐怖。読む／選ぶで進むアドベンチャー＆ノベル。
+            失った記憶を、声で辿るアドベンチャー＆ノベルゲーム。
           </p>
           <div class="mt-6 flex gap-3">
             <a
@@ -53,7 +53,7 @@
         <header class="mb-6 md:mb-8">
           <h2 class="text-2xl md:text-3xl font-semibold">キャラクター</h2>
           <p class="text-sm md:text-base text-base-mute mt-2">
-            静かな表情・目線・仕草が物語る。
+            それぞれの想い。キミの想い。
           </p>
         </header>
         <div class="flex gap-4 md:gap-6 overflow-x-auto pb-4 scrollbar-hide">
@@ -93,7 +93,9 @@
       <div class="mx-auto max-w-7xl px-4">
         <header class="mb-8">
           <h2 class="text-3xl font-semibold">システム</h2>
-          <p class="text-base-mute mt-2">派手さより"間"と"選択"に比重。</p>
+          <p class="text-base-mute mt-2">
+            アドベンチャーとノベル。ふたつの異なるゲーム性を組み合わせた、新しい体験。
+          </p>
         </header>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div
@@ -113,7 +115,7 @@
       </div>
     </section>
 
-    <!-- Lore / 資料室 -->
+    <!-- Scrapbook -->
     <section
       id="lore"
       class="h-screen min-h-[100vh] py-8 md:py-24 border-t border-base-line flex items-center overflow-hidden"
@@ -174,7 +176,7 @@
         </div>
         <div class="flex gap-3">
           <NuxtLink
-            to="/download"
+            to="/"
             class="px-5 py-2 border border-base-line hover:border-base-text"
             >PIC Hub</NuxtLink
           >
@@ -296,42 +298,37 @@ onUnmounted(() => {
 // モックデータ（差し替え前提）
 const characters = [
   {
-    name: '彼女',
-    role: '語り部',
-    image: 'https://picsum.photos/seed/a/800/600',
-    desc: '小声で、時々笑う。目は合わない。',
-    slug: 'her',
+    name: '主人公',
+    role: '主人公',
+    image: 'https://placehold.co/960x720',
+    desc: '…………。',
+    slug: '',
   },
   {
-    name: '友人',
-    role: '同級生',
-    image: 'https://picsum.photos/seed/b/800/600',
-    desc: 'いつも通りを装うけれど、手は震えている。',
-    slug: 'friend',
+    name: 'スグ',
+    role: '弟',
+    image: 'https://placehold.co/960x720',
+    desc: '…………。',
+    slug: '',
   },
   {
-    name: '案内人',
-    role: '？？？',
-    image: 'https://picsum.photos/seed/c/800/600',
-    desc: 'あなたの後ろに立っている。今も。',
-    slug: 'guide',
+    name: 'イロ',
+    role: '妹',
+    image: 'https://placehold.co/960x720',
+    desc: 'おかえり！　私のこと覚えてる？',
+    slug: '',
   },
 ]
 const features = [
   {
-    title: '選択で滲む恐怖',
-    text: '派手な演出は無い。選択が積み重なり、音も無く結末が変わる。',
-    anchor: 'choices',
+    title: 'アドベンチャー',
+    text: '声に導かれるように、失われた過去の記憶が蘇る。',
+    anchor: '',
   },
   {
-    title: '余白の演出',
-    text: '静寂・視線・「間」。読み間違いが恐怖を増幅する。',
-    anchor: 'silence',
-  },
-  {
-    title: '記録と追体験',
-    text: 'ノートに残る“声”。読み返すほど別の意味になる。',
-    anchor: 'notes',
+    title: 'ノベル',
+    text: '繊細な心情の変化や深い感情を追加体験する。',
+    anchor: '',
   },
 ]
 const regions = [
@@ -342,16 +339,16 @@ const regions = [
     slug: 'jizoudaki',
   },
   {
-    name: '堤防',
-    summary: '夜だけ潮の匂いがしない。その理由を知ってはならない。',
-    image: 'https://picsum.photos/seed/e/800/600',
-    slug: 'levee',
+    name: '童歌',
+    summary: '祈りは忘れられ、調べだけが継ぐ',
+    image: '/images/futakojizou.jpg',
+    slug: 'warabeuta',
   },
   {
-    name: '電話ボックス',
-    summary: '呼び出し音の回数は数えてはいけない。',
-    image: 'https://picsum.photos/seed/f/800/600',
-    slug: 'phone',
+    name: '未定',
+    summary: '考えてはいるが、まだ決まっていない',
+    image: 'https://placehold.co/960x720',
+    slug: '',
   },
 ]
 </script>
