@@ -21,14 +21,7 @@ export default defineNuxtConfig({
   ssr: false,
 
   app: {
-    baseURL: '/website/', // 例: '/kiminokoe/'
+    baseURL: '/website/',
     buildAssetsDir: 'assets',
-  },
-
-  nitro: {
-    output: {
-      dir: 'docs',
-      publicDir: 'docs',
-    },
   },
 })
