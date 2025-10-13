@@ -307,7 +307,7 @@ const characters = [
   {
     name: 'スグ',
     role: '弟',
-    image: 'https://placehold.co/960x720',
+    image: usePublicPath('/images/sugu.jpg'),
     desc: '…………。',
     slug: '',
   },
