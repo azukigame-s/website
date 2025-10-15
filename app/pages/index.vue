@@ -20,23 +20,23 @@
           <p class="mt-3 text-base text-white/80">
             失った記憶を、声で辿るアドベンチャー＆ノベルゲーム。
           </p>
-          <div class="mt-6 flex gap-3">
+          <div class="mt-6 flex gap-2 md:gap-3">
             <a
               href="#characters"
               @click.prevent="scrollToSection('characters')"
-              class="px-5 py-2 border border-base-line hover:border-white/80 transition"
+              class="px-3 py-2 md:px-5 text-xs md:text-sm border border-base-line hover:border-white/80 transition"
               >キャラクター</a
             >
             <a
               href="#system"
               @click.prevent="scrollToSection('system')"
-              class="px-5 py-2 border border-base-line hover:border-white/80 transition"
+              class="px-3 py-2 md:px-5 text-xs md:text-sm border border-base-line hover:border-white/80 transition"
               >システム</a
             >
             <a
               href="#lore"
               @click.prevent="scrollToSection('lore')"
-              class="px-5 py-2 border border-base-line hover:border-white/80 transition"
+              class="px-3 py-2 md:px-5 text-xs md:text-sm border border-base-line hover:border-white/80 transition"
               >資料室</a
             >
           </div>
